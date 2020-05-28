@@ -19,15 +19,21 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         String[] store = new String[7];
         Random rdnumber = new Random();
-        
+        int luckn=0;
+        string suitn;
+        Card luckyCard = new Card():
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Diamond");
+         luckn= luckyCard.getValue();
+         suitn= luckyCard.getSuits;
+        luckynumber = luck +suits;
         int number;
         int Low = 1;
         int High = 13;
         Vector b = new Vector();
-      for (int i = 0; i < magicHand.length; i++) {
+        for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-                
-          
+                   
              number = rdnumber.nextInt(13);
            c.setValue(number);
            c.getValue();
@@ -35,22 +41,26 @@ public class CardTrick {
           c.setSuit(Card.SUITS[d]);
           c.getSuit();
           store[i] = c.getValue()+ c.getSuit();
-    
-          /* if(!b.contains(number)){
-             i++;
-               b.add(number); 
-              
-               int d = rdnumber.nextInt(3);
-               //c.setValue(insert call to random number generator here)
-               c.setValue(number);
-               //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-               c.setSuit(Card.SUITS[d]);
-               
-           
-                   
-           }*/
+        if(luckynumber.equals(store[i])){
+        System.out.println(" you have got lucky number");
+            else 
+                        System.out.println(" you haven't got lucky number");
+
+}
       }
-       System.out.println("enter Card Number: ");
+    /* for (int i = 0; i < magicHand.length; i++) {
+            Card c = new Card();
+                   
+             number = rdnumber.nextInt(13);
+           c.setValue(number);
+           c.getValue();
+           int d = rdnumber.nextInt(4);
+          c.setSuit(Card.SUITS[d]);
+          c.getSuit();
+          store[i] = c.getValue()+ c.getSuit();
+
+      } */
+     /*  System.out.println("enter Card Number: ");
         String cardnumber  = input.nextLine();
         System.out.println("enter SUITS of Card: ");
          String SUITS  = input.nextLine();
@@ -66,7 +76,7 @@ public class CardTrick {
           System.out.println("magic hand is:");
               for (int qu = 0; qu < magicHand.length;qu++){
            System.out.println(store[qu] ); 
-        }
+        }*/
         
         //insert code to ask the user for Card value and suit, create their card
         
