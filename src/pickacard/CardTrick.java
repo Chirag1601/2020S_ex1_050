@@ -23,7 +23,7 @@ public class CardTrick {
             Card c = new Card();
             
             c.setValue(random.nextInt(13) + 1);      // sets the value to random int 1-13
-            c.setSuit(Card.SUITS[random.nextInt(4)]);// sets the Suits to random int 0-3
+            c.setSuit(Card.SUITS[random.nextInt(4)]);// sets the suit to randomly 
             
             magicHand[i] = c; // add the object to the array
             
@@ -38,6 +38,10 @@ public class CardTrick {
         
         System.out.println("What is your card suit (Clubs, Spades, Diamonds or Hearts):");
         String userCardSuit = input.next();
+        
+        Card luckyCard = new Card();
+        luckycard.setValue(7);
+        luckycard.setSuit(Card.SUITS[3]);
        
         boolean isMagic = false; // boolean check control
         for (Card card : magicHand) {  // loop to find the matching card
